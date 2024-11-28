@@ -1,0 +1,27 @@
+# values.yaml
+hostname: wiki.cloudops-XX.ucll.cloud  # Replace XX with your identifier
+
+resources:
+  limits:
+    cpu: "500m"        # CPU limit
+    memory: "512Mi"    # Memory limit
+  requests:
+    cpu: "250m"        # CPU request
+    memory: "256Mi"    # Memory request
+
+# Database configuration
+database:
+  type: postgres
+  host: your-database-host
+  port: 5432
+  user: your-db-user
+  password: your-db-password
+  db: your-db-name
+
+# Optionally configure persistence if required
+persistence:
+  enabled: true
+  storageClass: "standard"  # Change if using a specific storage class
+  accessModes:
+    - ReadWriteOnce
+  size: 1Gi
